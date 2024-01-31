@@ -1,7 +1,17 @@
 // All code that interacts with the DOM in a call to jQuery in the following 
 // function. Makes sure the code isn't run until the browser is done rendering html.
 $(function() {
-  console.log("READY!");
+  
+  for(var i=9; i<=17; i++){
+    var hourDiv = document.createElement("div");
+    hourDiv.id = "hour-" + i;
+    
+    var textArea = document.createElement("textArea");
+    var saveButton = document.createElement("button");
+    
+    hourDiv.append(textArea, saveButton);
+    $(".container-lg.px-5").append(hourDiv);
+  }
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
