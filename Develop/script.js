@@ -2,14 +2,15 @@
 // function. Makes sure the code isn't run until the browser is done rendering html.
 $(function() {
   
-  //Create a div for each hour
+  // For loop that creates a time, text area, and save button for every
+  // hour from 9am-5pm.
   for(var i=9; i<=17; i++){
     var hourDiv = document.createElement("div");
     hourDiv.id = "hour-" + i;
     hourDiv.setAttribute("class", "row time-block past");
 
     var hourLabel = document.createElement("div");
-    hourLabel.textContent = i; //need to fix this to not military time
+    hourLabel.textContent = timeChange(i);
     hourLabel.setAttribute("class", "col-2 col-md-1 hour text-center py-3");
 
     var textArea = document.createElement("textArea");
@@ -26,6 +27,7 @@ $(function() {
     hourDiv.append(hourLabel, textArea, saveButton);
     $(".container-lg.px-5").append(hourDiv);
   }
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -45,3 +47,20 @@ $(function() {
   //
   // TODO: Add code to display the current date in the header of the page.
 });
+
+// Changes time from 24hr to am and pm.
+function timeChange(militaryTime) {
+  var civilianTime = militaryTime;
+  var meridiem = "AM";
+
+  // Checking if post meridiem, PM (after midday).
+  if (militaryTime >= 12) {
+    meridiem = "PM";
+  }
+
+  //Changing military time to civilian time.
+  if (militaryTime >=13) {
+    civilianTime = militaryTime - 12;
+  }
+  return civilianTime + meridiem;
+} 
