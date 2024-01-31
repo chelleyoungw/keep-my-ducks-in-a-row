@@ -2,14 +2,28 @@
 // function. Makes sure the code isn't run until the browser is done rendering html.
 $(function() {
   
+  //Create a div for each hour
   for(var i=9; i<=17; i++){
     var hourDiv = document.createElement("div");
     hourDiv.id = "hour-" + i;
-    
+    hourDiv.setAttribute("class", "row time-block past");
+
+    var hourLabel = document.createElement("div");
+    hourLabel.textContent = i; //need to fix this to not military time
+    hourLabel.setAttribute("class", "col-2 col-md-1 hour text-center py-3");
+
     var textArea = document.createElement("textArea");
+    textArea.setAttribute("class", "col-8 col-md-10 description");
+    textArea.setAttribute("rows", "3");
+
     var saveButton = document.createElement("button");
-    
-    hourDiv.append(textArea, saveButton);
+    saveButton.setAttribute("class", "btn saveBtn col-2 col-md-1");
+
+    var saveIcon = document.createElement("i");
+    saveIcon.setAttribute("class", "fas fa-save");
+
+    saveButton.append(saveIcon);
+    hourDiv.append(hourLabel, textArea, saveButton);
     $(".container-lg.px-5").append(hourDiv);
   }
   // TODO: Add a listener for click events on the save button. This code should
