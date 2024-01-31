@@ -1,7 +1,15 @@
+
+
 // All code that interacts with the DOM in a call to jQuery in the following 
 // function. Makes sure the code isn't run until the browser is done rendering html.
 $(function() {
-  
+
+  // Adds time to the top of the screen.
+  var time = dayjs().format('hh:mmA');
+  var date = dayjs().format('dddd, MMMM D, YYYY')
+  $('#currentDay').text(date + " | " + time);
+
+
   // For loop that creates a time, text area, and save button for every
   // hour from 9am-5pm.
   for(var i=9; i<=17; i++){
