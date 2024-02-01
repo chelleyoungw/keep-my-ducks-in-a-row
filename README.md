@@ -1,4 +1,4 @@
-# My Daily Planner
+# My Daily Calendar For Work
 
 ## Description
 
@@ -13,6 +13,7 @@ To navigate on the web application, you can click inside any of the text areas f
 The following image shows the web application's appearance. You can also go to the web application by clicking the following link. https://chelleyoungw.github.io/keep-my-ducks-in-a-row
 
 ![My Portfolio webpage includes a navigation bar, a header image, and sections with text and images at the bottom of the page.](./assets/keep-my-ducks-in-a-row-screenshot.png) 
+
 ## Credits
 
 Chelle Wood (student)
