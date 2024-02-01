@@ -1,19 +1,18 @@
-# My Personal Porfolio
+# My Daily Planner
 
 ## Description
 
-The motivation for this project was to create a porfolio application so that future employers 
-can view by deployed porfolio and seemy work samples. This is to determine if I am a good candidate for an open position.
+The motivation for this project was to create a daily calender where I can schedule my tasks hourly from 9am - 5pm to keep me organized at work.
 
 ## Usage
 
-To navigate on the web application, you can click any of the 3 navigation topics in the top of the application upon opening. This will take the user down to the corresponding topic and describes the content for each section. You can click on any images in the section My Work. It will send you to the corresponding deployed project.
+To navigate on the web application, you can click inside any of the text areas for each hour and add your tasks. There are 3 lines in each hour. Then when you click the corresponding save button, it will save your text to your local storage. All past hours will be in grey, present hour is green, and all future hours are red.
 
 ## Application Image and Link
 
-The following image shows the web application's appearance. You can also go to the web application by clicking the following link. https://chelleyoungw.github.io/the--power-of-a-personal-professional-portfolio/
+The following image shows the web application's appearance. You can also go to the web application by clicking the following link. https://chelleyoungw.github.io/keep-my-ducks-in-a-row
 
-![My Portfolio webpage includes a navigation bar, a header image, and sections with text and images at the bottom of the page.](./assets/images/my-personal-portfolio.png) 
+![My Portfolio webpage includes a navigation bar, a header image, and sections with text and images at the bottom of the page.](./assets/keep-my-ducks-in-a-row-screenshot.png) 
 ## Credits
 
 Chelle Wood (student)
